@@ -85,6 +85,20 @@ app.post("/api/register", async (req, res) => {
     errors.password = "Пароль должен занимать не более 72 байт в UTF-8"
   }
 
+  if (!full_name) {
+    errors.login = "Введите ФИО"
+  }
+
+  if (!phone_number) {
+    errors.login = "Введите телефон"
+  }
+
+  if (!email) {
+    errors.email = "Введите email"
+  } else if (email.length > 255 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    errors.email = "Введите email в формате name@example.com"
+  }
+
   if (Object.keys(errors).length > 0) {
     return res.status(400).json({ message: "Проверьте поля", errors })
   }
