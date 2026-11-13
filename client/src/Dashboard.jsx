@@ -5,10 +5,10 @@ import Review from "./Review.jsx";
 import Slider from "./Slider.jsx";
 
 const slides = [
-  { src: '/images/slide-1.webp', alt: 'Изображение 1' },
-  { src: '/images/slide-2.webp', alt: 'Изображение 2' },
-  { src: '/images/slide-3.webp', alt: 'Изображение 3' },
-  { src: '/images/slide-4.webp', alt: 'Изображение 4' },
+  { src: '/images/image (1).webp', alt: 'Изображение 1' },
+  { src: '/images/image (2).webp', alt: 'Изображение 2' },
+  { src: '/images/image (3).webp', alt: 'Изображение 3' },
+  { src: '/images/image (4).webp', alt: 'Изображение 4' },
 ]
 
 
