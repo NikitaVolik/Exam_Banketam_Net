@@ -43,7 +43,7 @@ export default function AdminPage() {
       })
 
       setItems(current => current.map(item => item.id == id ? { ...item, status: nextStatus } : item))
-      setMessage(`Статус записи № ${id} сохранён`)
+      setMessage(`Статус банкета № ${id} сохранён`)
     } catch (err) {
       setError(err.message)
     } finally {
@@ -106,7 +106,7 @@ export default function AdminPage() {
       <div className="grid cols-2">
         {visible.map(item => (
           <article className="card stack" key={item.id}>
-            <h2>Запись № {item.id}</h2>
+            <h2>Банкет № {item.id}</h2>
             <h3>Помещение: {item.venue}</h3>
             <p>Пользователь: {item.login}</p>
             <p>Дата банкета: {item.event_date}</p>
@@ -129,7 +129,7 @@ export default function AdminPage() {
         ))}
       </div>
 
-      <nav className="row" aria-label="Страницы записей">
+      <nav className="row" aria-label="Страницы банкетов">
         <button className="btn" disabled={currentPage === 1} onClick={() => setPage(currentPage - 1)}>
           Назад
         </button>
